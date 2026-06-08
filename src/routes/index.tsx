@@ -106,7 +106,7 @@ function LandingPage() {
         <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-b from-transparent to-background" />
 
         <div className="relative mx-auto max-w-5xl px-6 text-center">
-          <div className="mx-auto inline-flex items-center gap-2 rounded-full border border-border bg-card/40 px-4 py-1.5 text-xs font-medium text-muted-foreground backdrop-blur">
+          <div className="mx-auto inline-flex animate-fade-up items-center gap-2 rounded-full border border-border bg-card/40 px-4 py-1.5 text-xs font-medium text-muted-foreground backdrop-blur">
             <span className="relative flex h-2 w-2">
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-neon opacity-75" />
               <span className="relative inline-flex h-2 w-2 rounded-full bg-neon" />
@@ -114,27 +114,28 @@ function LandingPage() {
             100+ sistemas • 19 segmentos • código-fonte liberado
           </div>
 
-          <h1 className="mt-6 font-display text-5xl font-bold leading-[1.05] tracking-tight md:text-7xl">
-            100+ <span className="text-gradient">Negócios prontos</span>
+          <h1 className="mt-6 animate-fade-up font-display text-5xl font-bold leading-[1.05] tracking-tight md:text-7xl" style={{ animationDelay: "0.1s" }}>
+            100+ <span className="text-shimmer">Negócios prontos</span>
             <br /> em 1 único lugar.
           </h1>
 
-          <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground md:text-xl">
+          <p className="mx-auto mt-6 max-w-2xl animate-fade-up text-lg text-muted-foreground md:text-xl" style={{ animationDelay: "0.2s" }}>
             100+ sistemas completos em PHP — CRM, ERP, Delivery, IA, Marketplace,
             Streaming, Fintech e mais. <span className="text-foreground font-medium">Instale, personalize, revenda e fature.</span>
           </p>
 
-          <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+          <div className="mt-10 flex animate-fade-up flex-col items-center justify-center gap-4 sm:flex-row" style={{ animationDelay: "0.3s" }}>
             <CTAButton className="!px-8 !py-5 !text-lg">Quero meu Arsenal por R$ 97</CTAButton>
             <span className="text-sm text-muted-foreground">Acesso imediato • 1 ano de acesso</span>
           </div>
 
-          <div className="mt-10 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-sm text-muted-foreground">
+          <div className="mt-10 flex animate-fade-up flex-wrap items-center justify-center gap-x-8 gap-y-3 text-sm text-muted-foreground" style={{ animationDelay: "0.4s" }}>
             <span className="flex items-center gap-2"><Code2 className="h-4 w-4 text-neon-2" /> Código-fonte liberado</span>
             <span className="flex items-center gap-2"><Repeat className="h-4 w-4 text-neon-2" /> Direito total de revenda</span>
             <span className="flex items-center gap-2"><Rocket className="h-4 w-4 text-neon-2" /> Pronto para deploy</span>
           </div>
         </div>
+
       </section>
 
       {/* DOR / URGÊNCIA */}

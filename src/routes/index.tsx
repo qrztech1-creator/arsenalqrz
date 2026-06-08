@@ -100,7 +100,7 @@ function LandingPage() {
 
 
       {/* HERO */}
-      <section className="relative pt-40 pb-28">
+      <section className="relative pt-52 pb-28">
         <div className="absolute inset-0 bg-hero-glow" />
         <div className="absolute inset-0 bg-grid opacity-60" />
         <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-b from-transparent to-background" />

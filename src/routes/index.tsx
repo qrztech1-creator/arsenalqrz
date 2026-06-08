@@ -3,12 +3,13 @@ import {
   Briefcase, ShoppingBag, UtensilsCrossed, HeartPulse, CalendarCheck,
   Users, Truck, Landmark, Home, GraduationCap, BriefcaseBusiness,
   Megaphone, Sparkles, Share2, PlayCircle, QrCode, Scale, Newspaper,
-  Layers, Check, Code2, Repeat, LifeBuoy, Rocket, Clock, Zap, ShieldCheck,
+  Layers, Check, Code2, Repeat, Rocket, Clock, Zap, ShieldCheck,
   ArrowRight, Infinity as InfinityIcon,
 } from "lucide-react";
 import {
   Accordion, AccordionContent, AccordionItem, AccordionTrigger,
 } from "@/components/ui/accordion";
+import arsenalLogo from "@/assets/arsenal.png.asset.json";
 
 const CHECKOUT_URL = "https://qrztech.com";
 
@@ -19,13 +20,13 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "239+ sistemas completos em PHP para você criar, revender ou faturar com SaaS em qualquer nicho. CRM, ERP, Delivery, IA, Fintech, Marketplace e muito mais. Acesso por R$ 97.",
+          "100+ sistemas completos em PHP para você criar, revender ou faturar com SaaS em qualquer nicho. CRM, ERP, Delivery, IA, Fintech, Marketplace e muito mais. Acesso por R$ 97/ano.",
       },
       { property: "og:title", content: "Arsenal QRZ — 100+ Negócios Prontos em 1 Único Lugar" },
       {
         property: "og:description",
         content:
-          "239+ sistemas completos. Instale, personalize, revenda e fature. Código-fonte liberado e direito total de revenda.",
+          "100+ sistemas completos. Instale, personalize, revenda e fature. Código-fonte liberado e direito total de revenda.",
       },
       { property: "og:type", content: "website" },
     ],
@@ -63,11 +64,11 @@ const niches = [
 ];
 
 const faqs = [
-  { q: "Preciso saber programar para usar os sistemas?", a: "Não. Tudo é desenvolvido para que qualquer pessoa, mesmo sem conhecimentos técnicos, possa utilizar. Você ainda conta com suporte na instalação quando precisar." },
+  { q: "Preciso saber programar para usar os sistemas?", a: "Não é necessário ser programador. Os sistemas vêm prontos para uso e a instalação é simples — basta subir em um servidor PHP padrão e seguir o passo a passo de cada sistema." },
   { q: "Como posso ganhar dinheiro com esses sistemas?", a: "Você pode vender os sistemas diretamente para empresas ou profissionais liberais, oferecer como serviço de assinatura (SaaS) ou implementar nos seus próprios negócios. As possibilidades de lucro são praticamente infinitas e você pode criar renda recorrente." },
   { q: "Quanto tempo leva para começar a faturar?", a: "Você pode começar a faturar em questão de dias. Basta seguir o guia de instalação, personalizar os sistemas conforme sua necessidade e começar a vender para o segmento que quiser." },
   { q: "Posso vender para qualquer nicho de mercado?", a: "Praticamente todos. Os sistemas são flexíveis e personalizáveis — restaurantes, consultórios, lojas online, fintechs, escolas, transportadoras, marketplaces e muito mais." },
-  { q: "Tem suporte para instalação?", a: "Sim. Caso queira, oferecemos suporte para instalar e configurar os sistemas no seu servidor." },
+  { q: "Como funciona o acesso?", a: "Você paga uma vez e tem 1 ano completo de acesso ao Arsenal QRZ, com todos os sistemas disponíveis para baixar, personalizar e revender." },
 ];
 
 function CTAButton({ children, className = "" }: { children: React.ReactNode; className?: string }) {
@@ -89,15 +90,10 @@ function LandingPage() {
     <div className="min-h-screen overflow-x-hidden">
       {/* NAV */}
       <header className="fixed top-0 z-50 w-full border-b border-border/40 bg-background/70 backdrop-blur-xl">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
-          <div className="flex items-center gap-2">
-            <div className="relative h-8 w-8 rounded-lg btn-primary-glow flex items-center justify-center">
-              <Zap className="h-4 w-4 text-white" />
-            </div>
-            <span className="font-display text-lg font-bold tracking-tight">
-              Arsenal <span className="text-gradient">QRZ</span>
-            </span>
-          </div>
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3">
+          <a href="/" className="flex items-center">
+            <img src={arsenalLogo.url} alt="Arsenal QRZ" className="h-9 w-auto md:h-10" />
+          </a>
           <CTAButton className="!px-5 !py-2.5 !text-sm">Quero o Arsenal — R$ 97</CTAButton>
         </div>
       </header>
@@ -114,7 +110,7 @@ function LandingPage() {
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-neon opacity-75" />
               <span className="relative inline-flex h-2 w-2 rounded-full bg-neon" />
             </span>
-            239+ sistemas • 19 segmentos • código-fonte liberado
+            100+ sistemas • 19 segmentos • código-fonte liberado
           </div>
 
           <h1 className="mt-6 font-display text-5xl font-bold leading-[1.05] tracking-tight md:text-7xl">
@@ -123,19 +119,19 @@ function LandingPage() {
           </h1>
 
           <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground md:text-xl">
-            239+ sistemas completos em PHP — CRM, ERP, Delivery, IA, Marketplace,
+            100+ sistemas completos em PHP — CRM, ERP, Delivery, IA, Marketplace,
             Streaming, Fintech e mais. <span className="text-foreground font-medium">Instale, personalize, revenda e fature.</span>
           </p>
 
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <CTAButton className="!px-8 !py-5 !text-lg">Quero meu Arsenal por R$ 97</CTAButton>
-            <span className="text-sm text-muted-foreground">Acesso imediato • Pagamento único</span>
+            <span className="text-sm text-muted-foreground">Acesso imediato • 1 ano de acesso</span>
           </div>
 
           <div className="mt-10 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-sm text-muted-foreground">
             <span className="flex items-center gap-2"><Code2 className="h-4 w-4 text-neon-2" /> Código-fonte liberado</span>
             <span className="flex items-center gap-2"><Repeat className="h-4 w-4 text-neon-2" /> Direito total de revenda</span>
-            <span className="flex items-center gap-2"><LifeBuoy className="h-4 w-4 text-neon-2" /> Suporte na instalação</span>
+            <span className="flex items-center gap-2"><Rocket className="h-4 w-4 text-neon-2" /> Pronto para deploy</span>
           </div>
         </div>
       </section>
@@ -180,7 +176,7 @@ function LandingPage() {
               O <span className="text-gradient">atalho</span> para começar um negócio digital
             </h2>
             <p className="mt-4 text-lg text-muted-foreground">
-              239+ sistemas prontos para você usar, personalizar ou revender. Em qualquer nicho.
+              100+ sistemas prontos para você usar, personalizar ou revender. Em qualquer nicho.
             </p>
           </div>
 
@@ -208,7 +204,7 @@ function LandingPage() {
         <div className="relative mx-auto max-w-7xl px-6">
           <div className="mx-auto max-w-2xl text-center">
             <div className="inline-flex items-center gap-2 rounded-full border border-border bg-card/40 px-4 py-1.5 text-xs font-medium text-muted-foreground backdrop-blur">
-              19 segmentos • +239 sistemas
+              19 segmentos • 100+ sistemas
             </div>
             <h2 className="mt-4 text-4xl font-bold md:text-5xl">
               Tudo isso por <span className="text-gradient">R$ 97</span>
@@ -257,7 +253,7 @@ function LandingPage() {
               { icon: Sparkles, t: "Versões Completas", d: "Já vem com todos os módulos e personalizações." },
               { icon: Repeat, t: "Revenda Liberada", d: "Direito total de revender quantas vezes quiser." },
               { icon: Code2, t: "Código-Fonte", d: "Acesso ao código para customizar do seu jeito." },
-              { icon: LifeBuoy, t: "Suporte Instalação", d: "Te ajudamos a colocar tudo no ar." },
+              { icon: Rocket, t: "Pronto para Deploy", d: "Suba em qualquer servidor PHP e comece a vender." },
             ].map(({ icon: Icon, t, d }) => (
               <div key={t} className="card-glow card-glow-hover rounded-2xl p-6">
                 <Icon className="h-6 w-6 text-neon-2" />
@@ -359,13 +355,13 @@ function LandingPage() {
             </p>
 
             <div className="mt-10 inline-flex flex-col items-center gap-2 rounded-2xl border border-border bg-background/60 p-6 backdrop-blur">
-              <span className="text-sm uppercase tracking-wider text-muted-foreground">Arsenal QRZ — Acesso Completo</span>
+              <span className="text-sm uppercase tracking-wider text-muted-foreground">Arsenal QRZ — Acesso Anual</span>
               <div className="flex items-baseline gap-2">
                 <span className="font-display text-6xl font-bold text-gradient">R$ 97</span>
-                <span className="text-muted-foreground">único</span>
+                <span className="text-muted-foreground">/ano</span>
               </div>
               <ul className="mt-3 space-y-1.5 text-left text-sm text-muted-foreground">
-                {["239+ sistemas completos", "Código-fonte liberado", "Direito total de revenda", "Suporte na instalação"].map((i) => (
+                {["100+ sistemas completos", "Código-fonte liberado", "Direito total de revenda", "Pronto para deploy"].map((i) => (
                   <li key={i} className="flex items-center gap-2">
                     <Check className="h-4 w-4 text-neon-2" /> {i}
                   </li>
@@ -377,7 +373,7 @@ function LandingPage() {
               <CTAButton className="!px-10 !py-5 !text-lg">Quero meu Arsenal agora</CTAButton>
             </div>
             <div className="mt-4 flex items-center justify-center gap-2 text-xs text-muted-foreground">
-              <ShieldCheck className="h-3.5 w-3.5" /> Pagamento único • Acesso imediato
+              <ShieldCheck className="h-3.5 w-3.5" /> Pagamento único • Acesso imediato por 1 ano
             </div>
           </div>
         </div>
@@ -386,11 +382,9 @@ function LandingPage() {
       {/* FOOTER */}
       <footer className="border-t border-border/40 py-10">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-6 text-sm text-muted-foreground md:flex-row">
-          <div className="flex items-center gap-2">
-            <div className="h-6 w-6 rounded btn-primary-glow flex items-center justify-center">
-              <Zap className="h-3 w-3 text-white" />
-            </div>
-            <span>Arsenal <span className="text-gradient font-semibold">QRZ</span> © {new Date().getFullYear()}</span>
+          <div className="flex items-center gap-3">
+            <img src={arsenalLogo.url} alt="Arsenal QRZ" className="h-7 w-auto" />
+            <span>© {new Date().getFullYear()}</span>
           </div>
           <a href={CHECKOUT_URL} target="_blank" rel="noopener noreferrer" className="hover:text-neon">
             Garantir acesso →

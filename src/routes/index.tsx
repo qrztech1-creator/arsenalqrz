@@ -217,10 +217,14 @@ function LandingPage() {
           </div>
 
           <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {segments.map(({ icon: Icon, name, msg, systems }) => (
-              <div key={name} className="card-glow card-glow-hover rounded-2xl p-6">
+            {segments.map(({ icon: Icon, name, msg, systems }, idx) => (
+              <div
+                key={name}
+                className="card-glow card-glow-hover group animate-fade-up rounded-2xl p-6"
+                style={{ animationDelay: `${Math.min(idx * 0.05, 0.5)}s` }}
+              >
                 <div className="flex items-center gap-3">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-neon/10 text-neon">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-neon/10 text-neon transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
                     <Icon className="h-5 w-5" />
                   </div>
                   <h3 className="font-display text-lg font-bold">{name}</h3>
@@ -239,6 +243,7 @@ function LandingPage() {
               </div>
             ))}
           </div>
+
         </div>
       </section>
 

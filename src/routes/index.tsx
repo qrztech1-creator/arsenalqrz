@@ -134,7 +134,7 @@ function LandingPage() {
           </p>
 
           <div className="mt-10 flex animate-fade-up flex-col items-center justify-center gap-4 sm:flex-row" style={{ animationDelay: "0.3s" }}>
-            <CTAButton className="!px-8 !py-5 !text-lg">Quero meu Arsenal por R$ 97</CTAButton>
+            <CTAButton href="#cta-principal" className="!px-8 !py-5 !text-lg">Quero meu Arsenal</CTAButton>
             <span className="text-sm text-muted-foreground">Acesso imediato • 1 ano de acesso</span>
           </div>
 

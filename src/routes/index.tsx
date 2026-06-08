@@ -71,12 +71,21 @@ const faqs = [
   { q: "Como funciona o acesso?", a: "Você paga uma vez e tem 1 ano completo de acesso ao Arsenal QRZ, com todos os sistemas disponíveis para baixar, personalizar e revender." },
 ];
 
-function CTAButton({ children, className = "" }: { children: React.ReactNode; className?: string }) {
+function CTAButton({
+  children,
+  className = "",
+  href = CHECKOUT_URL,
+}: {
+  children: React.ReactNode;
+  className?: string;
+  href?: string;
+}) {
+  const isAnchor = href.startsWith("#");
   return (
     <a
-      href={CHECKOUT_URL}
-      target="_blank"
-      rel="noopener noreferrer"
+      href={href}
+      target={isAnchor ? undefined : "_blank"}
+      rel={isAnchor ? undefined : "noopener noreferrer"}
       className={`btn-primary-glow inline-flex items-center justify-center gap-2 rounded-full px-7 py-4 text-base font-semibold ${className}`}
     >
       {children}

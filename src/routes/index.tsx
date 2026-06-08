@@ -331,29 +331,8 @@ function LandingPage() {
         </div>
       </section>
 
-      {/* FAQ */}
-      <section className="py-24">
-        <div className="mx-auto max-w-3xl px-6">
-          <div className="text-center">
-            <h2 className="text-4xl font-bold md:text-5xl">Perguntas <span className="text-gradient">frequentes</span></h2>
-          </div>
-          <Accordion type="single" collapsible className="mt-10">
-            {faqs.map((f, i) => (
-              <AccordionItem key={i} value={`item-${i}`} className="border-border">
-                <AccordionTrigger className="text-left text-base font-semibold hover:no-underline">
-                  {f.q}
-                </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground">
-                  {f.a}
-                </AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
-        </div>
-      </section>
-
-      {/* CTA FINAL */}
-      <section className="relative py-28">
+      {/* CTA PRINCIPAL */}
+      <section id="cta-principal" className="relative py-28">
         <div className="absolute inset-0 bg-hero-glow" />
         <div className="relative mx-auto max-w-4xl px-6">
           <div className="card-glow rounded-3xl p-10 text-center md:p-14">
@@ -392,6 +371,27 @@ function LandingPage() {
               <ShieldCheck className="h-3.5 w-3.5" /> Pagamento único • Acesso imediato por 1 ano
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-24">
+        <div className="mx-auto max-w-3xl px-6">
+          <div className="text-center">
+            <h2 className="text-4xl font-bold md:text-5xl">Perguntas <span className="text-gradient">frequentes</span></h2>
+          </div>
+          <Accordion type="single" collapsible className="mt-10">
+            {faqs.map((f, i) => (
+              <AccordionItem key={i} value={`item-${i}`} className="border-border">
+                <AccordionTrigger className="text-left text-base font-semibold hover:no-underline">
+                  {f.q}
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground">
+                  {f.a}
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
         </div>
       </section>
 

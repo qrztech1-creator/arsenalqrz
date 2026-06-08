@@ -71,12 +71,21 @@ const faqs = [
   { q: "Como funciona o acesso?", a: "Você paga uma vez e tem 1 ano completo de acesso ao Arsenal QRZ, com todos os sistemas disponíveis para baixar, personalizar e revender." },
 ];
 
-function CTAButton({ children, className = "" }: { children: React.ReactNode; className?: string }) {
+function CTAButton({
+  children,
+  className = "",
+  href = CHECKOUT_URL,
+}: {
+  children: React.ReactNode;
+  className?: string;
+  href?: string;
+}) {
+  const isAnchor = href.startsWith("#");
   return (
     <a
-      href={CHECKOUT_URL}
-      target="_blank"
-      rel="noopener noreferrer"
+      href={href}
+      target={isAnchor ? undefined : "_blank"}
+      rel={isAnchor ? undefined : "noopener noreferrer"}
       className={`btn-primary-glow inline-flex items-center justify-center gap-2 rounded-full px-7 py-4 text-base font-semibold ${className}`}
     >
       {children}
@@ -94,7 +103,7 @@ function LandingPage() {
           <a href="/" className="flex items-center transition-transform hover:scale-105">
             <img src={arsenalLogo.url} alt="Arsenal QRZ" className="h-20 w-auto md:h-24 animate-glow" />
           </a>
-          <CTAButton className="!px-5 !py-2.5 !text-sm">Quero o Arsenal — R$ 97</CTAButton>
+          <CTAButton href="#cta-principal" className="!px-5 !py-2.5 !text-sm">Quero o Arsenal</CTAButton>
         </div>
       </header>
 
@@ -125,7 +134,7 @@ function LandingPage() {
           </p>
 
           <div className="mt-10 flex animate-fade-up flex-col items-center justify-center gap-4 sm:flex-row" style={{ animationDelay: "0.3s" }}>
-            <CTAButton className="!px-8 !py-5 !text-lg">Quero meu Arsenal por R$ 97</CTAButton>
+            <CTAButton href="#cta-principal" className="!px-8 !py-5 !text-lg">Quero meu Arsenal</CTAButton>
             <span className="text-sm text-muted-foreground">Acesso imediato • 1 ano de acesso</span>
           </div>
 
@@ -322,29 +331,8 @@ function LandingPage() {
         </div>
       </section>
 
-      {/* FAQ */}
-      <section className="py-24">
-        <div className="mx-auto max-w-3xl px-6">
-          <div className="text-center">
-            <h2 className="text-4xl font-bold md:text-5xl">Perguntas <span className="text-gradient">frequentes</span></h2>
-          </div>
-          <Accordion type="single" collapsible className="mt-10">
-            {faqs.map((f, i) => (
-              <AccordionItem key={i} value={`item-${i}`} className="border-border">
-                <AccordionTrigger className="text-left text-base font-semibold hover:no-underline">
-                  {f.q}
-                </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground">
-                  {f.a}
-                </AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
-        </div>
-      </section>
-
-      {/* CTA FINAL */}
-      <section className="relative py-28">
+      {/* CTA PRINCIPAL */}
+      <section id="cta-principal" className="relative py-28">
         <div className="absolute inset-0 bg-hero-glow" />
         <div className="relative mx-auto max-w-4xl px-6">
           <div className="card-glow rounded-3xl p-10 text-center md:p-14">
@@ -383,6 +371,27 @@ function LandingPage() {
               <ShieldCheck className="h-3.5 w-3.5" /> Pagamento único • Acesso imediato por 1 ano
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-24">
+        <div className="mx-auto max-w-3xl px-6">
+          <div className="text-center">
+            <h2 className="text-4xl font-bold md:text-5xl">Perguntas <span className="text-gradient">frequentes</span></h2>
+          </div>
+          <Accordion type="single" collapsible className="mt-10">
+            {faqs.map((f, i) => (
+              <AccordionItem key={i} value={`item-${i}`} className="border-border">
+                <AccordionTrigger className="text-left text-base font-semibold hover:no-underline">
+                  {f.q}
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground">
+                  {f.a}
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
         </div>
       </section>
 

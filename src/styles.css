@@ -131,3 +131,59 @@
     box-shadow: 0 16px 50px -10px oklch(0.65 0.24 295 / 0.75), inset 0 1px 0 oklch(1 0 0 / 0.25);
   }
 }
+
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+@utility animate-float {
+  animation: float-slow 5s ease-in-out infinite;
+}
+
+@keyframes glow-pulse {
+  0%, 100% { filter: drop-shadow(0 0 18px oklch(0.65 0.24 295 / 0.55)); }
+  50% { filter: drop-shadow(0 0 32px oklch(0.65 0.24 295 / 0.85)); }
+}
+@utility animate-glow {
+  animation: glow-pulse 3.5s ease-in-out infinite;
+}
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@utility animate-fade-up {
+  animation: fade-up 0.7s ease-out both;
+}
+
+@keyframes shimmer-x {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+@utility text-shimmer {
+  background: linear-gradient(120deg,
+    oklch(0.95 0.05 295) 0%,
+    oklch(0.78 0.2 295) 30%,
+    oklch(0.95 0.18 210) 50%,
+    oklch(0.78 0.2 295) 70%,
+    oklch(0.95 0.05 295) 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: shimmer-x 6s linear infinite;
+}
+
+@keyframes grid-drift {
+  0% { background-position: 0 0; }
+  100% { background-position: 48px 48px; }
+}
+@utility bg-grid-animated {
+  background-image:
+    linear-gradient(to right, oklch(1 0 0 / 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, oklch(1 0 0 / 0.05) 1px, transparent 1px);
+  background-size: 48px 48px;
+  animation: grid-drift 20s linear infinite;
+}
+

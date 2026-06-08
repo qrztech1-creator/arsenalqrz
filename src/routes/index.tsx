@@ -91,21 +91,22 @@ function LandingPage() {
       {/* NAV */}
       <header className="fixed top-0 z-50 w-full border-b border-border/40 bg-background/70 backdrop-blur-xl">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3">
-          <a href="/" className="flex items-center">
-            <img src={arsenalLogo.url} alt="Arsenal QRZ" className="h-9 w-auto md:h-10" />
+          <a href="/" className="flex items-center transition-transform hover:scale-105">
+            <img src={arsenalLogo.url} alt="Arsenal QRZ" className="h-20 w-auto md:h-24 animate-glow" />
           </a>
           <CTAButton className="!px-5 !py-2.5 !text-sm">Quero o Arsenal — R$ 97</CTAButton>
         </div>
       </header>
 
+
       {/* HERO */}
-      <section className="relative pt-40 pb-28">
+      <section className="relative pt-52 pb-28">
         <div className="absolute inset-0 bg-hero-glow" />
-        <div className="absolute inset-0 bg-grid opacity-60" />
+        <div className="absolute inset-0 bg-grid-animated opacity-60" />
         <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-b from-transparent to-background" />
 
         <div className="relative mx-auto max-w-5xl px-6 text-center">
-          <div className="mx-auto inline-flex items-center gap-2 rounded-full border border-border bg-card/40 px-4 py-1.5 text-xs font-medium text-muted-foreground backdrop-blur">
+          <div className="mx-auto inline-flex animate-fade-up items-center gap-2 rounded-full border border-border bg-card/40 px-4 py-1.5 text-xs font-medium text-muted-foreground backdrop-blur">
             <span className="relative flex h-2 w-2">
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-neon opacity-75" />
               <span className="relative inline-flex h-2 w-2 rounded-full bg-neon" />
@@ -113,27 +114,28 @@ function LandingPage() {
             100+ sistemas • 19 segmentos • código-fonte liberado
           </div>
 
-          <h1 className="mt-6 font-display text-5xl font-bold leading-[1.05] tracking-tight md:text-7xl">
-            100+ <span className="text-gradient">Negócios prontos</span>
+          <h1 className="mt-6 animate-fade-up font-display text-5xl font-bold leading-[1.05] tracking-tight md:text-7xl" style={{ animationDelay: "0.1s" }}>
+            100+ <span className="text-shimmer">Negócios prontos</span>
             <br /> em 1 único lugar.
           </h1>
 
-          <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground md:text-xl">
+          <p className="mx-auto mt-6 max-w-2xl animate-fade-up text-lg text-muted-foreground md:text-xl" style={{ animationDelay: "0.2s" }}>
             100+ sistemas completos em PHP — CRM, ERP, Delivery, IA, Marketplace,
             Streaming, Fintech e mais. <span className="text-foreground font-medium">Instale, personalize, revenda e fature.</span>
           </p>
 
-          <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+          <div className="mt-10 flex animate-fade-up flex-col items-center justify-center gap-4 sm:flex-row" style={{ animationDelay: "0.3s" }}>
             <CTAButton className="!px-8 !py-5 !text-lg">Quero meu Arsenal por R$ 97</CTAButton>
             <span className="text-sm text-muted-foreground">Acesso imediato • 1 ano de acesso</span>
           </div>
 
-          <div className="mt-10 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-sm text-muted-foreground">
+          <div className="mt-10 flex animate-fade-up flex-wrap items-center justify-center gap-x-8 gap-y-3 text-sm text-muted-foreground" style={{ animationDelay: "0.4s" }}>
             <span className="flex items-center gap-2"><Code2 className="h-4 w-4 text-neon-2" /> Código-fonte liberado</span>
             <span className="flex items-center gap-2"><Repeat className="h-4 w-4 text-neon-2" /> Direito total de revenda</span>
             <span className="flex items-center gap-2"><Rocket className="h-4 w-4 text-neon-2" /> Pronto para deploy</span>
           </div>
         </div>
+
       </section>
 
       {/* DOR / URGÊNCIA */}
@@ -215,10 +217,14 @@ function LandingPage() {
           </div>
 
           <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {segments.map(({ icon: Icon, name, msg, systems }) => (
-              <div key={name} className="card-glow card-glow-hover rounded-2xl p-6">
+            {segments.map(({ icon: Icon, name, msg, systems }, idx) => (
+              <div
+                key={name}
+                className="card-glow card-glow-hover group animate-fade-up rounded-2xl p-6"
+                style={{ animationDelay: `${Math.min(idx * 0.05, 0.5)}s` }}
+              >
                 <div className="flex items-center gap-3">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-neon/10 text-neon">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-neon/10 text-neon transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
                     <Icon className="h-5 w-5" />
                   </div>
                   <h3 className="font-display text-lg font-bold">{name}</h3>
@@ -237,6 +243,7 @@ function LandingPage() {
               </div>
             ))}
           </div>
+
         </div>
       </section>
 
@@ -383,7 +390,7 @@ function LandingPage() {
       <footer className="border-t border-border/40 py-10">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-6 text-sm text-muted-foreground md:flex-row">
           <div className="flex items-center gap-3">
-            <img src={arsenalLogo.url} alt="Arsenal QRZ" className="h-7 w-auto" />
+            <img src={arsenalLogo.url} alt="Arsenal QRZ" className="h-16 w-auto md:h-20" />
             <span>© {new Date().getFullYear()}</span>
           </div>
           <a href={CHECKOUT_URL} target="_blank" rel="noopener noreferrer" className="hover:text-neon">

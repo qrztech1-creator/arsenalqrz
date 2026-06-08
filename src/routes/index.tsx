@@ -103,7 +103,7 @@ function LandingPage() {
           <a href="/" className="flex items-center transition-transform hover:scale-105">
             <img src={arsenalLogo.url} alt="Arsenal QRZ" className="h-20 w-auto md:h-24 animate-glow" />
           </a>
-          <CTAButton className="!px-5 !py-2.5 !text-sm">Quero o Arsenal — R$ 97</CTAButton>
+          <CTAButton href="#cta-principal" className="!px-5 !py-2.5 !text-sm">Quero o Arsenal</CTAButton>
         </div>
       </header>
 

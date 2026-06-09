@@ -10,6 +10,7 @@ import {
   Accordion, AccordionContent, AccordionItem, AccordionTrigger,
 } from "@/components/ui/accordion";
 import arsenalLogo from "@/assets/arsenal.png.asset.json";
+import { CountdownBar, ExitIntentPopup } from "@/components/UrgencyLayer";
 
 const CHECKOUT_URL = "https://qrztech.com";
 

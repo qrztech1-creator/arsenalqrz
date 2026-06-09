@@ -10,6 +10,7 @@ import {
   Accordion, AccordionContent, AccordionItem, AccordionTrigger,
 } from "@/components/ui/accordion";
 import arsenalLogo from "@/assets/arsenal.png.asset.json";
+import { CountdownBar, ExitIntentPopup } from "@/components/UrgencyLayer";
 
 const CHECKOUT_URL = "https://qrztech.com";
 
@@ -97,8 +98,10 @@ function CTAButton({
 function LandingPage() {
   return (
     <div className="min-h-screen overflow-x-hidden">
+      <CountdownBar />
+      <ExitIntentPopup />
       {/* NAV */}
-      <header className="fixed top-0 z-50 w-full border-b border-border/40 bg-background/70 backdrop-blur-xl">
+      <header className="fixed top-9 z-50 w-full border-b border-border/40 bg-background/70 backdrop-blur-xl sm:top-10">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3">
           <a href="/" className="flex items-center transition-transform hover:scale-105">
             <img src={arsenalLogo.url} alt="Arsenal QRZ" className="h-20 w-auto md:h-24 animate-glow" />

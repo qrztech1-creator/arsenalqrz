@@ -401,10 +401,10 @@ function LandingPage() {
       </section>
 
       {/* FOOTER */}
-      <footer className="border-t border-border/40 py-10">
-        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-6 text-sm text-muted-foreground md:flex-row">
-          <div className="flex items-center gap-3">
-            <img src={arsenalLogo.url} alt="Arsenal QRZ" className="h-16 w-auto md:h-20" />
+      <footer className="border-t border-border/40 py-8 sm:py-10">
+        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-4 text-xs text-muted-foreground sm:px-6 sm:text-sm md:flex-row">
+          <div className="flex flex-col items-center gap-2 md:flex-row md:gap-3">
+            <img src={arsenalLogo.url} alt="Arsenal QRZ" className="h-14 w-auto sm:h-16 md:h-20" />
             <span>© {new Date().getFullYear()}</span>
           </div>
           <a href={CHECKOUT_URL} target="_blank" rel="noopener noreferrer" className="hover:text-neon">

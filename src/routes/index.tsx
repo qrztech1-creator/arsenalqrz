@@ -213,33 +213,33 @@ function LandingPage() {
       </section>
 
       {/* SEGMENTOS */}
-      <section className="relative py-24">
+      <section className="relative py-16 sm:py-24">
         <div className="absolute inset-0 bg-grid opacity-30" />
-        <div className="relative mx-auto max-w-7xl px-6">
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6">
           <div className="mx-auto max-w-2xl text-center">
             <div className="inline-flex items-center gap-2 rounded-full border border-border bg-card/40 px-4 py-1.5 text-xs font-medium text-muted-foreground backdrop-blur">
               19 segmentos • 100+ sistemas
             </div>
-            <h2 className="mt-4 text-4xl font-bold md:text-5xl">
+            <h2 className="mt-4 text-3xl font-bold sm:text-4xl md:text-5xl">
               <span className="line-through text-muted-foreground">de R$ 197</span> por <span className="text-gradient">apenas 11x de R$ 5,22</span>
             </h2>
-            <p className="mt-4 text-lg text-muted-foreground">
+            <p className="mt-4 text-base text-muted-foreground sm:text-lg">
               Um arsenal completo para você atacar qualquer mercado.
             </p>
           </div>
 
-          <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-10 grid gap-4 sm:mt-14 sm:gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {segments.map(({ icon: Icon, name, msg, systems }, idx) => (
               <div
                 key={name}
-                className="card-glow card-glow-hover group animate-fade-up rounded-2xl p-6"
+                className="card-glow card-glow-hover group animate-fade-up rounded-2xl p-5 sm:p-6"
                 style={{ animationDelay: `${Math.min(idx * 0.05, 0.5)}s` }}
               >
                 <div className="flex items-center gap-3">
                   <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-neon/10 text-neon transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
                     <Icon className="h-5 w-5" />
                   </div>
-                  <h3 className="font-display text-lg font-bold">{name}</h3>
+                  <h3 className="font-display text-base font-bold sm:text-lg">{name}</h3>
                 </div>
                 <p className="mt-3 text-sm text-muted-foreground">{msg}</p>
                 <div className="mt-4 flex flex-wrap gap-1.5">

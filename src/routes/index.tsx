@@ -183,24 +183,24 @@ function LandingPage() {
       </section>
 
       {/* O QUE É */}
-      <section className="py-20">
-        <div className="mx-auto max-w-6xl px-6">
+      <section className="py-16 sm:py-20">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-4xl font-bold md:text-5xl">
+            <h2 className="text-3xl font-bold sm:text-4xl md:text-5xl">
               O <span className="text-gradient">atalho</span> para começar um negócio digital
             </h2>
-            <p className="mt-4 text-lg text-muted-foreground">
+            <p className="mt-4 text-base text-muted-foreground sm:text-lg">
               100+ sistemas prontos para você usar, personalizar ou revender. Em qualquer nicho.
             </p>
           </div>
 
-          <div className="mt-12 grid gap-6 md:grid-cols-3">
+          <div className="mt-10 grid gap-5 sm:mt-12 sm:gap-6 md:grid-cols-3">
             {[
               { icon: Rocket, t: "Soluções Prontas", d: "Sistemas completos, testados e prontos para deploy. Sem desenvolver do zero." },
               { icon: Sparkles, t: "100% Personalizáveis", d: "Adapte cor, marca, funcionalidades e venda como se fosse seu." },
               { icon: InfinityIcon, t: "Revenda Liberada", d: "Direito total de revenda. Cobre uma vez, mensalmente ou venda projetos." },
             ].map(({ icon: Icon, t, d }) => (
-              <div key={t} className="card-glow card-glow-hover rounded-2xl p-7">
+              <div key={t} className="card-glow card-glow-hover rounded-2xl p-6 sm:p-7">
                 <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-neon/10 text-neon">
                   <Icon className="h-6 w-6" />
                 </div>

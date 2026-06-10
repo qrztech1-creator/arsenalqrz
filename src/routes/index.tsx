@@ -221,7 +221,7 @@ function LandingPage() {
               19 segmentos • 100+ sistemas
             </div>
             <h2 className="mt-4 text-4xl font-bold md:text-5xl">
-              Tudo isso por <span className="text-gradient">R$ 97</span>
+              <span className="line-through text-muted-foreground">de R$ 197</span> por <span className="text-gradient">apenas 11x de R$ 5,22</span>
             </h2>
             <p className="mt-4 text-lg text-muted-foreground">
               Um arsenal completo para você atacar qualquer mercado.
@@ -352,12 +352,12 @@ function LandingPage() {
               entra em qualquer nicho com tecnologia de ponta e pronta para faturar.
             </p>
 
-            <div className="mt-10 inline-flex flex-col items-center gap-2 rounded-2xl border border-border bg-background/60 p-6 backdrop-blur">
-              <span className="text-sm uppercase tracking-wider text-muted-foreground">Arsenal QRZ — Acesso Anual</span>
+            <div className="mt-10 inline-flex flex-col items-center gap-1 rounded-2xl border border-border bg-background/60 p-6 backdrop-blur">
+              <span className="text-sm uppercase tracking-wider text-muted-foreground line-through">de R$ 197</span>
               <div className="flex items-baseline gap-2">
-                <span className="font-display text-6xl font-bold text-gradient">R$ 97</span>
-                <span className="text-muted-foreground">/ano</span>
+                <span className="font-display text-5xl font-bold text-gradient">11x de R$ 5,22</span>
               </div>
+              <span className="text-xs text-muted-foreground">no cartão</span>
               <ul className="mt-3 space-y-1.5 text-left text-sm text-muted-foreground">
                 {["100+ sistemas completos", "Código-fonte liberado", "Direito total de revenda", "Pronto para deploy"].map((i) => (
                   <li key={i} className="flex items-center gap-2">

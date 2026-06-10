@@ -380,15 +380,15 @@ function LandingPage() {
       </section>
 
       {/* FAQ */}
-      <section className="py-24">
-        <div className="mx-auto max-w-3xl px-6">
+      <section className="py-16 sm:py-24">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6">
           <div className="text-center">
-            <h2 className="text-4xl font-bold md:text-5xl">Perguntas <span className="text-gradient">frequentes</span></h2>
+            <h2 className="text-3xl font-bold sm:text-4xl md:text-5xl">Perguntas <span className="text-gradient">frequentes</span></h2>
           </div>
-          <Accordion type="single" collapsible className="mt-10">
+          <Accordion type="single" collapsible className="mt-8 sm:mt-10">
             {faqs.map((f, i) => (
               <AccordionItem key={i} value={`item-${i}`} className="border-border">
-                <AccordionTrigger className="text-left text-base font-semibold hover:no-underline">
+                <AccordionTrigger className="text-left text-sm font-semibold hover:no-underline sm:text-base">
                   {f.q}
                 </AccordionTrigger>
                 <AccordionContent className="text-muted-foreground">

@@ -134,6 +134,7 @@ export function ExitIntentPopup() {
           <div className="text-xs uppercase tracking-wider text-muted-foreground line-through">de R$ 197</div>
           <div className="font-display text-4xl font-bold text-gradient">apenas 11x de R$ 5,22</div>
           <div className="text-xs text-muted-foreground">no cartão</div>
+          <div className="mt-2 text-[11px] font-medium text-neon">7 dias de garantia</div>
         </div>
 
         <a

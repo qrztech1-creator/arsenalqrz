@@ -102,23 +102,23 @@ function LandingPage() {
       <ExitIntentPopup />
       {/* NAV */}
       <header className="fixed top-9 z-50 w-full border-b border-border/40 bg-background/70 backdrop-blur-xl sm:top-10">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-2 sm:px-6 sm:py-3">
           <a href="/" className="flex items-center transition-transform hover:scale-105">
-            <img src={arsenalLogo.url} alt="Arsenal QRZ" className="h-20 w-auto md:h-24 animate-glow" />
+            <img src={arsenalLogo.url} alt="Arsenal QRZ" className="h-14 w-auto sm:h-20 md:h-24 animate-glow" />
           </a>
-          <CTAButton href="#cta-principal" className="!px-5 !py-2.5 !text-sm">Quero o Arsenal</CTAButton>
+          <CTAButton href="#cta-principal" className="!px-3 !py-2 !text-xs sm:!px-5 sm:!py-2.5 sm:!text-sm">Quero o Arsenal</CTAButton>
         </div>
       </header>
 
 
       {/* HERO */}
-      <section className="relative pt-52 pb-28">
+      <section className="relative pt-36 pb-20 sm:pt-44 md:pt-52 md:pb-28">
         <div className="absolute inset-0 bg-hero-glow" />
         <div className="absolute inset-0 bg-grid-animated opacity-60" />
         <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-b from-transparent to-background" />
 
-        <div className="relative mx-auto max-w-5xl px-6 text-center">
-          <div className="mx-auto inline-flex animate-fade-up items-center gap-2 rounded-full border border-border bg-card/40 px-4 py-1.5 text-xs font-medium text-muted-foreground backdrop-blur">
+        <div className="relative mx-auto max-w-5xl px-4 text-center sm:px-6">
+          <div className="mx-auto inline-flex animate-fade-up items-center gap-2 rounded-full border border-border bg-card/40 px-3 py-1.5 text-[10px] font-medium text-muted-foreground backdrop-blur sm:px-4 sm:text-xs">
             <span className="relative flex h-2 w-2">
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-neon opacity-75" />
               <span className="relative inline-flex h-2 w-2 rounded-full bg-neon" />
@@ -126,22 +126,22 @@ function LandingPage() {
             100+ sistemas • 19 segmentos • código-fonte liberado
           </div>
 
-          <h1 className="mt-6 animate-fade-up font-display text-5xl font-bold leading-[1.05] tracking-tight md:text-7xl" style={{ animationDelay: "0.1s" }}>
+          <h1 className="mt-6 animate-fade-up font-display text-3xl font-bold leading-[1.1] tracking-tight sm:text-5xl md:text-7xl" style={{ animationDelay: "0.1s" }}>
             100+ <span className="text-shimmer">Negócios prontos</span>
             <br /> em 1 único lugar.
           </h1>
 
-          <p className="mx-auto mt-6 max-w-2xl animate-fade-up text-lg text-muted-foreground md:text-xl" style={{ animationDelay: "0.2s" }}>
+          <p className="mx-auto mt-6 max-w-2xl animate-fade-up text-base text-muted-foreground sm:text-lg md:text-xl" style={{ animationDelay: "0.2s" }}>
             100+ sistemas completos em PHP — CRM, ERP, Delivery, IA, Marketplace,
             Streaming, Fintech e mais. <span className="text-foreground font-medium">Instale, personalize, revenda e fature.</span>
           </p>
 
-          <div className="mt-10 flex animate-fade-up flex-col items-center justify-center gap-4 sm:flex-row" style={{ animationDelay: "0.3s" }}>
-            <CTAButton href="#cta-principal" className="!px-8 !py-5 !text-lg">Quero meu Arsenal</CTAButton>
-            <span className="text-sm text-muted-foreground">Acesso imediato • 1 ano de acesso</span>
+          <div className="mt-8 flex animate-fade-up flex-col items-center justify-center gap-4 sm:mt-10 sm:flex-row" style={{ animationDelay: "0.3s" }}>
+            <CTAButton href="#cta-principal" className="!px-6 !py-4 !text-base sm:!px-8 sm:!py-5 sm:!text-lg">Quero meu Arsenal</CTAButton>
+            <span className="text-xs text-muted-foreground sm:text-sm">Acesso imediato • 1 ano de acesso</span>
           </div>
 
-          <div className="mt-10 flex animate-fade-up flex-wrap items-center justify-center gap-x-8 gap-y-3 text-sm text-muted-foreground" style={{ animationDelay: "0.4s" }}>
+          <div className="mt-8 flex animate-fade-up flex-col items-center justify-center gap-3 text-xs text-muted-foreground sm:mt-10 sm:flex-row sm:flex-wrap sm:gap-x-8 sm:gap-y-3 sm:text-sm" style={{ animationDelay: "0.4s" }}>
             <span className="flex items-center gap-2"><Code2 className="h-4 w-4 text-neon-2" /> Código-fonte liberado</span>
             <span className="flex items-center gap-2"><Repeat className="h-4 w-4 text-neon-2" /> Direito total de revenda</span>
             <span className="flex items-center gap-2"><Rocket className="h-4 w-4 text-neon-2" /> Pronto para deploy</span>
@@ -151,14 +151,14 @@ function LandingPage() {
       </section>
 
       {/* DOR / URGÊNCIA */}
-      <section className="relative py-20">
-        <div className="mx-auto max-w-5xl px-6">
-          <div className="card-glow rounded-2xl p-8 md:p-12">
+      <section className="relative py-16 sm:py-20">
+        <div className="mx-auto max-w-5xl px-4 sm:px-6">
+          <div className="card-glow rounded-2xl p-6 sm:p-8 md:p-12">
             <div className="flex items-center gap-3 text-neon">
               <Clock className="h-5 w-5" />
               <span className="text-sm font-semibold uppercase tracking-wider">A era da IA não espera</span>
             </div>
-            <h2 className="mt-4 text-3xl font-bold leading-tight md:text-4xl">
+            <h2 className="mt-4 text-2xl font-bold leading-tight sm:text-3xl md:text-4xl">
               Enquanto você tenta desenvolver do zero,
               <br className="hidden md:block" />
               <span className="text-gradient"> seus concorrentes já estão faturando.</span>
@@ -183,24 +183,24 @@ function LandingPage() {
       </section>
 
       {/* O QUE É */}
-      <section className="py-20">
-        <div className="mx-auto max-w-6xl px-6">
+      <section className="py-16 sm:py-20">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-4xl font-bold md:text-5xl">
+            <h2 className="text-3xl font-bold sm:text-4xl md:text-5xl">
               O <span className="text-gradient">atalho</span> para começar um negócio digital
             </h2>
-            <p className="mt-4 text-lg text-muted-foreground">
+            <p className="mt-4 text-base text-muted-foreground sm:text-lg">
               100+ sistemas prontos para você usar, personalizar ou revender. Em qualquer nicho.
             </p>
           </div>
 
-          <div className="mt-12 grid gap-6 md:grid-cols-3">
+          <div className="mt-10 grid gap-5 sm:mt-12 sm:gap-6 md:grid-cols-3">
             {[
               { icon: Rocket, t: "Soluções Prontas", d: "Sistemas completos, testados e prontos para deploy. Sem desenvolver do zero." },
               { icon: Sparkles, t: "100% Personalizáveis", d: "Adapte cor, marca, funcionalidades e venda como se fosse seu." },
               { icon: InfinityIcon, t: "Revenda Liberada", d: "Direito total de revenda. Cobre uma vez, mensalmente ou venda projetos." },
             ].map(({ icon: Icon, t, d }) => (
-              <div key={t} className="card-glow card-glow-hover rounded-2xl p-7">
+              <div key={t} className="card-glow card-glow-hover rounded-2xl p-6 sm:p-7">
                 <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-neon/10 text-neon">
                   <Icon className="h-6 w-6" />
                 </div>
@@ -213,33 +213,33 @@ function LandingPage() {
       </section>
 
       {/* SEGMENTOS */}
-      <section className="relative py-24">
+      <section className="relative py-16 sm:py-24">
         <div className="absolute inset-0 bg-grid opacity-30" />
-        <div className="relative mx-auto max-w-7xl px-6">
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6">
           <div className="mx-auto max-w-2xl text-center">
             <div className="inline-flex items-center gap-2 rounded-full border border-border bg-card/40 px-4 py-1.5 text-xs font-medium text-muted-foreground backdrop-blur">
               19 segmentos • 100+ sistemas
             </div>
-            <h2 className="mt-4 text-4xl font-bold md:text-5xl">
+            <h2 className="mt-4 text-3xl font-bold sm:text-4xl md:text-5xl">
               <span className="line-through text-muted-foreground">de R$ 197</span> por <span className="text-gradient">apenas 11x de R$ 5,22</span>
             </h2>
-            <p className="mt-4 text-lg text-muted-foreground">
+            <p className="mt-4 text-base text-muted-foreground sm:text-lg">
               Um arsenal completo para você atacar qualquer mercado.
             </p>
           </div>
 
-          <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-10 grid gap-4 sm:mt-14 sm:gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {segments.map(({ icon: Icon, name, msg, systems }, idx) => (
               <div
                 key={name}
-                className="card-glow card-glow-hover group animate-fade-up rounded-2xl p-6"
+                className="card-glow card-glow-hover group animate-fade-up rounded-2xl p-5 sm:p-6"
                 style={{ animationDelay: `${Math.min(idx * 0.05, 0.5)}s` }}
               >
                 <div className="flex items-center gap-3">
                   <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-neon/10 text-neon transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
                     <Icon className="h-5 w-5" />
                   </div>
-                  <h3 className="font-display text-lg font-bold">{name}</h3>
+                  <h3 className="font-display text-base font-bold sm:text-lg">{name}</h3>
                 </div>
                 <p className="mt-3 text-sm text-muted-foreground">{msg}</p>
                 <div className="mt-4 flex flex-wrap gap-1.5">
@@ -260,21 +260,21 @@ function LandingPage() {
       </section>
 
       {/* O QUE VEM */}
-      <section className="py-24">
-        <div className="mx-auto max-w-6xl px-6">
+      <section className="py-16 sm:py-24">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-4xl font-bold md:text-5xl">
+            <h2 className="text-3xl font-bold sm:text-4xl md:text-5xl">
               O que vem com <span className="text-gradient">cada sistema</span>
             </h2>
           </div>
-          <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-10 grid gap-4 sm:mt-12 sm:gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {[
               { icon: Sparkles, t: "Versões Completas", d: "Já vem com todos os módulos e personalizações." },
               { icon: Repeat, t: "Revenda Liberada", d: "Direito total de revender quantas vezes quiser." },
               { icon: Code2, t: "Código-Fonte", d: "Acesso ao código para customizar do seu jeito." },
               { icon: Rocket, t: "Pronto para Deploy", d: "Suba em qualquer servidor PHP e comece a vender." },
             ].map(({ icon: Icon, t, d }) => (
-              <div key={t} className="card-glow card-glow-hover rounded-2xl p-6">
+              <div key={t} className="card-glow card-glow-hover rounded-2xl p-5 sm:p-6">
                 <Icon className="h-6 w-6 text-neon-2" />
                 <h3 className="mt-4 font-bold">{t}</h3>
                 <p className="mt-1 text-sm text-muted-foreground">{d}</p>
@@ -285,26 +285,26 @@ function LandingPage() {
       </section>
 
       {/* COMO FATURAR */}
-      <section className="relative py-24">
+      <section className="relative py-16 sm:py-24">
         <div className="absolute inset-0 bg-hero-glow opacity-40" />
-        <div className="relative mx-auto max-w-6xl px-6">
+        <div className="relative mx-auto max-w-6xl px-4 sm:px-6">
           <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-4xl font-bold md:text-5xl">
+            <h2 className="text-3xl font-bold sm:text-4xl md:text-5xl">
               3 caminhos para <span className="text-gradient">faturar</span>
             </h2>
-            <p className="mt-4 text-lg text-muted-foreground">
+            <p className="mt-4 text-base text-muted-foreground sm:text-lg">
               Possibilidades praticamente infinitas de monetização.
             </p>
           </div>
-          <div className="mt-12 grid gap-6 md:grid-cols-3">
+          <div className="mt-10 grid gap-5 sm:mt-12 sm:gap-6 md:grid-cols-3">
             {[
               { n: "01", t: "Venda direta", d: "Venda os sistemas para empresas e profissionais liberais por projeto." },
               { n: "02", t: "SaaS recorrente", d: "Ofereça como assinatura mensal e construa uma renda previsível." },
               { n: "03", t: "Seu próprio negócio", d: "Use no seu próprio negócio e domine seu nicho com tecnologia de ponta." },
             ].map(({ n, t, d }) => (
-              <div key={n} className="card-glow card-glow-hover rounded-2xl p-8">
-                <div className="font-display text-5xl font-bold text-gradient">{n}</div>
-                <h3 className="mt-4 text-xl font-bold">{t}</h3>
+              <div key={n} className="card-glow card-glow-hover rounded-2xl p-6 sm:p-8">
+                <div className="font-display text-4xl font-bold text-gradient sm:text-5xl">{n}</div>
+                <h3 className="mt-4 text-lg font-bold sm:text-xl">{t}</h3>
                 <p className="mt-2 text-muted-foreground">{d}</p>
               </div>
             ))}
@@ -313,19 +313,19 @@ function LandingPage() {
       </section>
 
       {/* NICHOS */}
-      <section className="py-24">
-        <div className="mx-auto max-w-5xl px-6 text-center">
-          <h2 className="text-4xl font-bold md:text-5xl">
+      <section className="py-16 sm:py-24">
+        <div className="mx-auto max-w-5xl px-4 text-center sm:px-6">
+          <h2 className="text-3xl font-bold sm:text-4xl md:text-5xl">
             Ataque <span className="text-gradient">qualquer nicho</span>
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">
+          <p className="mx-auto mt-4 max-w-2xl text-base text-muted-foreground sm:text-lg">
             Os sistemas são flexíveis e se adaptam a praticamente qualquer mercado.
           </p>
           <div className="mt-10 flex flex-wrap justify-center gap-2">
             {niches.map((n) => (
               <span
                 key={n}
-                className="rounded-full border border-border bg-card/50 px-4 py-2 text-sm font-medium backdrop-blur transition hover:border-neon/60 hover:text-neon"
+                className="rounded-full border border-border bg-card/50 px-3 py-1.5 text-xs font-medium backdrop-blur transition hover:border-neon/60 hover:text-neon sm:px-4 sm:py-2 sm:text-sm"
               >
                 {n}
               </span>
@@ -335,29 +335,29 @@ function LandingPage() {
       </section>
 
       {/* CTA PRINCIPAL */}
-      <section id="cta-principal" className="relative py-28">
+      <section id="cta-principal" className="relative py-20 sm:py-28">
         <div className="absolute inset-0 bg-hero-glow" />
-        <div className="relative mx-auto max-w-4xl px-6">
-          <div className="card-glow rounded-3xl p-10 text-center md:p-14">
-            <div className="inline-flex items-center gap-2 rounded-full border border-neon/40 bg-neon/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-neon">
-              <Clock className="h-3.5 w-3.5" /> Não perca tempo
+        <div className="relative mx-auto max-w-4xl px-4 sm:px-6">
+          <div className="card-glow rounded-3xl p-6 text-center sm:p-10 md:p-14">
+            <div className="inline-flex items-center gap-2 rounded-full border border-neon/40 bg-neon/10 px-3 py-1 text-[10px] font-semibold uppercase tracking-wider text-neon sm:px-4 sm:py-1.5 sm:text-xs">
+              <Clock className="h-3 w-3 sm:h-3.5 sm:w-3.5" /> Não perca tempo
             </div>
-            <h2 className="mt-6 font-display text-4xl font-bold leading-tight md:text-6xl">
+            <h2 className="mt-4 font-display text-2xl font-bold leading-tight sm:text-4xl md:text-6xl sm:mt-6">
               O tempo está passando.
               <br />
               <span className="text-gradient">Seus concorrentes não estão esperando.</span>
             </h2>
-            <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground">
+            <p className="mx-auto mt-4 max-w-2xl text-base text-muted-foreground sm:mt-6 sm:text-lg">
               Enquanto você pensa, a IA acelera o mercado. Com o Arsenal QRZ você
               entra em qualquer nicho com tecnologia de ponta e pronta para faturar.
             </p>
 
-            <div className="mt-10 inline-flex flex-col items-center gap-1 rounded-2xl border border-border bg-background/60 p-6 backdrop-blur">
-              <span className="text-sm uppercase tracking-wider text-muted-foreground line-through">de R$ 197</span>
+            <div className="mt-8 inline-flex flex-col items-center gap-1 rounded-2xl border border-border bg-background/60 p-4 backdrop-blur sm:mt-10 sm:p-6">
+              <span className="text-xs uppercase tracking-wider text-muted-foreground line-through sm:text-sm">de R$ 197</span>
               <div className="flex items-baseline gap-2">
-                <span className="font-display text-5xl font-bold text-gradient">11x de R$ 5,22</span>
+                <span className="font-display text-3xl font-bold text-gradient sm:text-5xl">11x de R$ 5,22</span>
               </div>
-              <span className="text-xs text-muted-foreground">no cartão</span>
+              <span className="text-[10px] text-muted-foreground sm:text-xs">no cartão</span>
               <ul className="mt-3 space-y-1.5 text-left text-sm text-muted-foreground">
                 {["100+ sistemas completos", "Código-fonte liberado", "Direito total de revenda", "Pronto para deploy"].map((i) => (
                   <li key={i} className="flex items-center gap-2">
@@ -367,26 +367,28 @@ function LandingPage() {
               </ul>
             </div>
 
-            <div className="mt-8 flex justify-center">
-              <CTAButton className="!px-10 !py-5 !text-lg">Quero meu Arsenal agora</CTAButton>
+            <div className="mt-6 flex justify-center sm:mt-8">
+              <CTAButton className="!px-6 !py-4 !text-base sm:!px-10 sm:!py-5 sm:!text-lg">Quero meu Arsenal agora</CTAButton>
             </div>
-            <div className="mt-4 flex items-center justify-center gap-2 text-xs text-muted-foreground">
-              <ShieldCheck className="h-3.5 w-3.5" /> Pagamento único • Acesso imediato por 1 ano
+            <div className="mt-3 flex flex-col items-center justify-center gap-1 text-[10px] text-muted-foreground sm:mt-4 sm:flex-row sm:gap-2 sm:text-xs">
+              <span className="flex items-center gap-1"><ShieldCheck className="h-3 w-3 sm:h-3.5 sm:w-3.5" /> Pagamento único • Acesso imediato por 1 ano</span>
+              <span className="hidden sm:inline">•</span>
+              <span className="font-medium text-neon">7 dias de garantia</span>
             </div>
           </div>
         </div>
       </section>
 
       {/* FAQ */}
-      <section className="py-24">
-        <div className="mx-auto max-w-3xl px-6">
+      <section className="py-16 sm:py-24">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6">
           <div className="text-center">
-            <h2 className="text-4xl font-bold md:text-5xl">Perguntas <span className="text-gradient">frequentes</span></h2>
+            <h2 className="text-3xl font-bold sm:text-4xl md:text-5xl">Perguntas <span className="text-gradient">frequentes</span></h2>
           </div>
-          <Accordion type="single" collapsible className="mt-10">
+          <Accordion type="single" collapsible className="mt-8 sm:mt-10">
             {faqs.map((f, i) => (
               <AccordionItem key={i} value={`item-${i}`} className="border-border">
-                <AccordionTrigger className="text-left text-base font-semibold hover:no-underline">
+                <AccordionTrigger className="text-left text-sm font-semibold hover:no-underline sm:text-base">
                   {f.q}
                 </AccordionTrigger>
                 <AccordionContent className="text-muted-foreground">
@@ -399,10 +401,10 @@ function LandingPage() {
       </section>
 
       {/* FOOTER */}
-      <footer className="border-t border-border/40 py-10">
-        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-6 text-sm text-muted-foreground md:flex-row">
-          <div className="flex items-center gap-3">
-            <img src={arsenalLogo.url} alt="Arsenal QRZ" className="h-16 w-auto md:h-20" />
+      <footer className="border-t border-border/40 py-8 sm:py-10">
+        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-4 text-xs text-muted-foreground sm:px-6 sm:text-sm md:flex-row">
+          <div className="flex flex-col items-center gap-2 md:flex-row md:gap-3">
+            <img src={arsenalLogo.url} alt="Arsenal QRZ" className="h-14 w-auto sm:h-16 md:h-20" />
             <span>© {new Date().getFullYear()}</span>
           </div>
           <a href={CHECKOUT_URL} target="_blank" rel="noopener noreferrer" className="hover:text-neon">

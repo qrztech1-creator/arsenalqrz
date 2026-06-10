@@ -260,21 +260,21 @@ function LandingPage() {
       </section>
 
       {/* O QUE VEM */}
-      <section className="py-24">
-        <div className="mx-auto max-w-6xl px-6">
+      <section className="py-16 sm:py-24">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-4xl font-bold md:text-5xl">
+            <h2 className="text-3xl font-bold sm:text-4xl md:text-5xl">
               O que vem com <span className="text-gradient">cada sistema</span>
             </h2>
           </div>
-          <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-10 grid gap-4 sm:mt-12 sm:gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {[
               { icon: Sparkles, t: "Versões Completas", d: "Já vem com todos os módulos e personalizações." },
               { icon: Repeat, t: "Revenda Liberada", d: "Direito total de revender quantas vezes quiser." },
               { icon: Code2, t: "Código-Fonte", d: "Acesso ao código para customizar do seu jeito." },
               { icon: Rocket, t: "Pronto para Deploy", d: "Suba em qualquer servidor PHP e comece a vender." },
             ].map(({ icon: Icon, t, d }) => (
-              <div key={t} className="card-glow card-glow-hover rounded-2xl p-6">
+              <div key={t} className="card-glow card-glow-hover rounded-2xl p-5 sm:p-6">
                 <Icon className="h-6 w-6 text-neon-2" />
                 <h3 className="mt-4 font-bold">{t}</h3>
                 <p className="mt-1 text-sm text-muted-foreground">{d}</p>

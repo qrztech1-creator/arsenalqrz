@@ -33,7 +33,7 @@ export function CountdownBar() {
     <div className="fixed top-0 left-0 right-0 z-[60] bg-gradient-to-r from-neon/90 via-neon-3/90 to-neon-2/90 text-white shadow-lg">
       <div className="mx-auto flex max-w-7xl items-center justify-center gap-2 px-4 py-2 text-xs font-semibold sm:text-sm">
         <Flame className="h-4 w-4 animate-pulse" />
-        <span className="hidden sm:inline">Oferta por tempo limitado — R$ 97 expira em</span>
+        <span className="hidden sm:inline">Oferta por tempo limitado — expira em</span>
         <span className="sm:hidden">Oferta expira em</span>
         <span className="inline-flex items-center gap-1 rounded-md bg-black/30 px-2 py-0.5 font-mono tabular-nums">
           <Clock className="h-3.5 w-3.5" /> {m}:{s}
@@ -127,12 +127,13 @@ export function ExitIntentPopup() {
         </h3>
         <p className="mt-3 text-sm text-muted-foreground">
           Você está prestes a perder acesso a <strong className="text-foreground">100+ sistemas prontos</strong> por
-          apenas <strong className="text-foreground">R$ 97/ano</strong>. Essa oferta não vai durar.
+          apenas <strong className="text-foreground">11x de R$ 5,22</strong>. Essa oferta não vai durar.
         </p>
 
         <div className="my-6 rounded-xl border border-border bg-background/60 p-4">
-          <div className="text-xs uppercase tracking-wider text-muted-foreground">De R$ 497 por apenas</div>
-          <div className="font-display text-5xl font-bold text-gradient">R$ 97</div>
+          <div className="text-xs uppercase tracking-wider text-muted-foreground line-through">de R$ 197</div>
+          <div className="font-display text-4xl font-bold text-gradient">apenas 11x de R$ 5,22</div>
+          <div className="text-xs text-muted-foreground">no cartão</div>
         </div>
 
         <a

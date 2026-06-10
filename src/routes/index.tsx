@@ -102,11 +102,11 @@ function LandingPage() {
       <ExitIntentPopup />
       {/* NAV */}
       <header className="fixed top-9 z-50 w-full border-b border-border/40 bg-background/70 backdrop-blur-xl sm:top-10">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-2 sm:px-6 sm:py-3">
           <a href="/" className="flex items-center transition-transform hover:scale-105">
-            <img src={arsenalLogo.url} alt="Arsenal QRZ" className="h-20 w-auto md:h-24 animate-glow" />
+            <img src={arsenalLogo.url} alt="Arsenal QRZ" className="h-14 w-auto sm:h-20 md:h-24 animate-glow" />
           </a>
-          <CTAButton href="#cta-principal" className="!px-5 !py-2.5 !text-sm">Quero o Arsenal</CTAButton>
+          <CTAButton href="#cta-principal" className="!px-3 !py-2 !text-xs sm:!px-5 sm:!py-2.5 sm:!text-sm">Quero o Arsenal</CTAButton>
         </div>
       </header>
 

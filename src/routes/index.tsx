@@ -285,26 +285,26 @@ function LandingPage() {
       </section>
 
       {/* COMO FATURAR */}
-      <section className="relative py-24">
+      <section className="relative py-16 sm:py-24">
         <div className="absolute inset-0 bg-hero-glow opacity-40" />
-        <div className="relative mx-auto max-w-6xl px-6">
+        <div className="relative mx-auto max-w-6xl px-4 sm:px-6">
           <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-4xl font-bold md:text-5xl">
+            <h2 className="text-3xl font-bold sm:text-4xl md:text-5xl">
               3 caminhos para <span className="text-gradient">faturar</span>
             </h2>
-            <p className="mt-4 text-lg text-muted-foreground">
+            <p className="mt-4 text-base text-muted-foreground sm:text-lg">
               Possibilidades praticamente infinitas de monetização.
             </p>
           </div>
-          <div className="mt-12 grid gap-6 md:grid-cols-3">
+          <div className="mt-10 grid gap-5 sm:mt-12 sm:gap-6 md:grid-cols-3">
             {[
               { n: "01", t: "Venda direta", d: "Venda os sistemas para empresas e profissionais liberais por projeto." },
               { n: "02", t: "SaaS recorrente", d: "Ofereça como assinatura mensal e construa uma renda previsível." },
               { n: "03", t: "Seu próprio negócio", d: "Use no seu próprio negócio e domine seu nicho com tecnologia de ponta." },
             ].map(({ n, t, d }) => (
-              <div key={n} className="card-glow card-glow-hover rounded-2xl p-8">
-                <div className="font-display text-5xl font-bold text-gradient">{n}</div>
-                <h3 className="mt-4 text-xl font-bold">{t}</h3>
+              <div key={n} className="card-glow card-glow-hover rounded-2xl p-6 sm:p-8">
+                <div className="font-display text-4xl font-bold text-gradient sm:text-5xl">{n}</div>
+                <h3 className="mt-4 text-lg font-bold sm:text-xl">{t}</h3>
                 <p className="mt-2 text-muted-foreground">{d}</p>
               </div>
             ))}

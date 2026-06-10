@@ -151,14 +151,14 @@ function LandingPage() {
       </section>
 
       {/* DOR / URGÊNCIA */}
-      <section className="relative py-20">
-        <div className="mx-auto max-w-5xl px-6">
-          <div className="card-glow rounded-2xl p-8 md:p-12">
+      <section className="relative py-16 sm:py-20">
+        <div className="mx-auto max-w-5xl px-4 sm:px-6">
+          <div className="card-glow rounded-2xl p-6 sm:p-8 md:p-12">
             <div className="flex items-center gap-3 text-neon">
               <Clock className="h-5 w-5" />
               <span className="text-sm font-semibold uppercase tracking-wider">A era da IA não espera</span>
             </div>
-            <h2 className="mt-4 text-3xl font-bold leading-tight md:text-4xl">
+            <h2 className="mt-4 text-2xl font-bold leading-tight sm:text-3xl md:text-4xl">
               Enquanto você tenta desenvolver do zero,
               <br className="hidden md:block" />
               <span className="text-gradient"> seus concorrentes já estão faturando.</span>

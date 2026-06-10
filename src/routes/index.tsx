@@ -335,29 +335,29 @@ function LandingPage() {
       </section>
 
       {/* CTA PRINCIPAL */}
-      <section id="cta-principal" className="relative py-28">
+      <section id="cta-principal" className="relative py-20 sm:py-28">
         <div className="absolute inset-0 bg-hero-glow" />
-        <div className="relative mx-auto max-w-4xl px-6">
-          <div className="card-glow rounded-3xl p-10 text-center md:p-14">
-            <div className="inline-flex items-center gap-2 rounded-full border border-neon/40 bg-neon/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-neon">
-              <Clock className="h-3.5 w-3.5" /> Não perca tempo
+        <div className="relative mx-auto max-w-4xl px-4 sm:px-6">
+          <div className="card-glow rounded-3xl p-6 text-center sm:p-10 md:p-14">
+            <div className="inline-flex items-center gap-2 rounded-full border border-neon/40 bg-neon/10 px-3 py-1 text-[10px] font-semibold uppercase tracking-wider text-neon sm:px-4 sm:py-1.5 sm:text-xs">
+              <Clock className="h-3 w-3 sm:h-3.5 sm:w-3.5" /> Não perca tempo
             </div>
-            <h2 className="mt-6 font-display text-4xl font-bold leading-tight md:text-6xl">
+            <h2 className="mt-4 font-display text-2xl font-bold leading-tight sm:text-4xl md:text-6xl sm:mt-6">
               O tempo está passando.
               <br />
               <span className="text-gradient">Seus concorrentes não estão esperando.</span>
             </h2>
-            <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground">
+            <p className="mx-auto mt-4 max-w-2xl text-base text-muted-foreground sm:mt-6 sm:text-lg">
               Enquanto você pensa, a IA acelera o mercado. Com o Arsenal QRZ você
               entra em qualquer nicho com tecnologia de ponta e pronta para faturar.
             </p>
 
-            <div className="mt-10 inline-flex flex-col items-center gap-1 rounded-2xl border border-border bg-background/60 p-6 backdrop-blur">
-              <span className="text-sm uppercase tracking-wider text-muted-foreground line-through">de R$ 197</span>
+            <div className="mt-8 inline-flex flex-col items-center gap-1 rounded-2xl border border-border bg-background/60 p-4 backdrop-blur sm:mt-10 sm:p-6">
+              <span className="text-xs uppercase tracking-wider text-muted-foreground line-through sm:text-sm">de R$ 197</span>
               <div className="flex items-baseline gap-2">
-                <span className="font-display text-5xl font-bold text-gradient">11x de R$ 5,22</span>
+                <span className="font-display text-3xl font-bold text-gradient sm:text-5xl">11x de R$ 5,22</span>
               </div>
-              <span className="text-xs text-muted-foreground">no cartão</span>
+              <span className="text-[10px] text-muted-foreground sm:text-xs">no cartão</span>
               <ul className="mt-3 space-y-1.5 text-left text-sm text-muted-foreground">
                 {["100+ sistemas completos", "Código-fonte liberado", "Direito total de revenda", "Pronto para deploy"].map((i) => (
                   <li key={i} className="flex items-center gap-2">
@@ -367,11 +367,13 @@ function LandingPage() {
               </ul>
             </div>
 
-            <div className="mt-8 flex justify-center">
-              <CTAButton className="!px-10 !py-5 !text-lg">Quero meu Arsenal agora</CTAButton>
+            <div className="mt-6 flex justify-center sm:mt-8">
+              <CTAButton className="!px-6 !py-4 !text-base sm:!px-10 sm:!py-5 sm:!text-lg">Quero meu Arsenal agora</CTAButton>
             </div>
-            <div className="mt-4 flex items-center justify-center gap-2 text-xs text-muted-foreground">
-              <ShieldCheck className="h-3.5 w-3.5" /> Pagamento único • Acesso imediato por 1 ano
+            <div className="mt-3 flex flex-col items-center justify-center gap-1 text-[10px] text-muted-foreground sm:mt-4 sm:flex-row sm:gap-2 sm:text-xs">
+              <span className="flex items-center gap-1"><ShieldCheck className="h-3 w-3 sm:h-3.5 sm:w-3.5" /> Pagamento único • Acesso imediato por 1 ano</span>
+              <span className="hidden sm:inline">•</span>
+              <span className="font-medium text-neon">7 dias de garantia</span>
             </div>
           </div>
         </div>

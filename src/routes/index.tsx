@@ -313,19 +313,19 @@ function LandingPage() {
       </section>
 
       {/* NICHOS */}
-      <section className="py-24">
-        <div className="mx-auto max-w-5xl px-6 text-center">
-          <h2 className="text-4xl font-bold md:text-5xl">
+      <section className="py-16 sm:py-24">
+        <div className="mx-auto max-w-5xl px-4 text-center sm:px-6">
+          <h2 className="text-3xl font-bold sm:text-4xl md:text-5xl">
             Ataque <span className="text-gradient">qualquer nicho</span>
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">
+          <p className="mx-auto mt-4 max-w-2xl text-base text-muted-foreground sm:text-lg">
             Os sistemas são flexíveis e se adaptam a praticamente qualquer mercado.
           </p>
           <div className="mt-10 flex flex-wrap justify-center gap-2">
             {niches.map((n) => (
               <span
                 key={n}
-                className="rounded-full border border-border bg-card/50 px-4 py-2 text-sm font-medium backdrop-blur transition hover:border-neon/60 hover:text-neon"
+                className="rounded-full border border-border bg-card/50 px-3 py-1.5 text-xs font-medium backdrop-blur transition hover:border-neon/60 hover:text-neon sm:px-4 sm:py-2 sm:text-sm"
               >
                 {n}
               </span>

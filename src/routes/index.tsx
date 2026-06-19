@@ -12,7 +12,7 @@ import {
 
 import { CountdownBar, ExitIntentPopup } from "@/components/UrgencyLayer";
 
-const CHECKOUT_URL = "https://qrztech.com";
+const CHECKOUT_URL = "https://chk.eduzz.com/39YNJ7NPWO";
 
 export const Route = createFileRoute("/")({
   head: () => ({

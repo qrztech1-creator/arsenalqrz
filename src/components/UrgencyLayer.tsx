@@ -143,7 +143,7 @@ export function ExitIntentPopup() {
           rel="noopener noreferrer"
           className="btn-primary-glow inline-flex w-full items-center justify-center gap-2 rounded-full px-7 py-4 text-base font-semibold"
         >
-          Garantir minha vaga agora
+          Garantir meu acesso AGORA!
           <ArrowRight className="h-4 w-4" />
         </a>
         <button

@@ -9,7 +9,7 @@ import {
 import {
   Accordion, AccordionContent, AccordionItem, AccordionTrigger,
 } from "@/components/ui/accordion";
-import arsenalLogo from "@/assets/arsenal.png.asset.json";
+
 import { CountdownBar, ExitIntentPopup } from "@/components/UrgencyLayer";
 
 const CHECKOUT_URL = "https://qrztech.com";
@@ -104,7 +104,7 @@ function LandingPage() {
       <header className="fixed top-9 z-50 w-full border-b border-border/40 bg-background/70 backdrop-blur-xl sm:top-10">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-2 sm:px-6 sm:py-3">
           <a href="/" className="flex items-center transition-transform hover:scale-105">
-            <img src={arsenalLogo.url} alt="Arsenal QRZ" className="h-14 w-auto sm:h-20 md:h-24 animate-glow" />
+            <img src="https://i.postimg.cc/NGbqQP7r/arsenal.png" alt="Arsenal QRZ" className="h-14 w-auto sm:h-20 md:h-24 animate-glow" />
           </a>
           <CTAButton href="#cta-principal" className="!px-3 !py-2 !text-xs sm:!px-5 sm:!py-2.5 sm:!text-sm">Quero o Arsenal</CTAButton>
         </div>
@@ -404,7 +404,7 @@ function LandingPage() {
       <footer className="border-t border-border/40 py-8 sm:py-10">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-4 text-xs text-muted-foreground sm:px-6 sm:text-sm md:flex-row">
           <div className="flex flex-col items-center gap-2 md:flex-row md:gap-3">
-            <img src={arsenalLogo.url} alt="Arsenal QRZ" className="h-14 w-auto sm:h-16 md:h-20" />
+            <img src="https://i.postimg.cc/NGbqQP7r/arsenal.png" alt="Arsenal QRZ" className="h-14 w-auto sm:h-16 md:h-20" />
             <span>© {new Date().getFullYear()}</span>
           </div>
           <a href={CHECKOUT_URL} target="_blank" rel="noopener noreferrer" className="hover:text-neon">

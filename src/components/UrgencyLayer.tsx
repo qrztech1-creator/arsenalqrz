@@ -1,7 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { Clock, X, Flame, ArrowRight } from "lucide-react";
-
-const CHECKOUT_URL = "https://qrztech.com";
+import { CHECKOUT_URL } from "@/lib/constants";
 const DURATION = 5 * 60; // 5 min
 const STORAGE_KEY = "arsenal_countdown_end";
 const POPUP_KEY = "arsenal_popup_shown";

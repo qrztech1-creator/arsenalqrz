@@ -11,8 +11,7 @@ import {
 } from "@/components/ui/accordion";
 
 import { CountdownBar, ExitIntentPopup } from "@/components/UrgencyLayer";
-
-const CHECKOUT_URL = "https://chk.eduzz.com/39YNJ7NPWO";
+import { CHECKOUT_URL } from "@/lib/constants";
 
 export const Route = createFileRoute("/")({
   head: () => ({
